@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+*.log
+.gemini/
+antigravity-ide/
+.vscode/
+.idea/
+tmp/
+temp/
