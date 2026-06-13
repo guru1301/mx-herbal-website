@@ -952,6 +952,280 @@
     font-weight: 300;
   }
 
+  /* RITUAL SECTION */
+  .ritual-section {
+    padding: 140px 80px;
+    border-bottom: 0.5px solid var(--border);
+    background: var(--ivory);
+  }
+
+  .ritual-top {
+    margin-bottom: 80px;
+    text-align: center;
+  }
+
+  .ritual-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    position: relative;
+  }
+
+  .ritual-grid::before {
+    content: '';
+    position: absolute;
+    top: 100px; left: 10%;
+    right: 10%; height: 0.5px;
+    background: radial-gradient(circle, var(--gold) 40%, transparent 100%);
+    z-index: 0;
+    opacity: 0.6;
+  }
+
+  .ritual-step {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .ritual-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+
+  .ritual-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--forest);
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+  }
+
+  .ritual-desc {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  /* BOTANICAL INGREDIENTS */
+  .ingredients-section {
+    padding: 140px 80px;
+    border-bottom: 0.5px solid var(--border);
+    background: #fff;
+  }
+
+  .ingredients-top {
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+  }
+
+  .ingredient-card {
+    background: var(--ivory);
+    border: 0.5px solid var(--border);
+    padding: 48px 24px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 2px;
+  }
+
+  .ingredient-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+    box-shadow: 0 15px 35px rgba(28, 74, 42, 0.04);
+  }
+
+  .ingredient-vector {
+    width: 44px;
+    height: 44px;
+    color: var(--forest);
+    margin: 0 auto 24px;
+    opacity: 0.85;
+    transition: transform 0.4s ease;
+  }
+
+  .ingredient-card:hover .ingredient-vector {
+    transform: scale(1.1);
+    color: var(--gold);
+  }
+
+  .ingredient-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--forest);
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+  }
+
+  .ingredient-sans {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .ingredient-desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  /* SKIN PAIRING SELECTOR */
+  .pairing-section {
+    padding: 140px 80px;
+    border-bottom: 0.5px solid var(--border);
+    background: var(--stone);
+  }
+
+  .pairing-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .pairing-left {
+    padding-right: 20px;
+  }
+
+  .pairing-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 36px;
+  }
+
+  .pairing-btn {
+    background: var(--ivory);
+    border: 0.5px solid var(--border);
+    padding: 20px 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--forest);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    outline: none;
+    border-radius: 2px;
+  }
+
+  .pairing-btn:hover {
+    border-color: var(--forest);
+    background: #fff;
+  }
+
+  .pairing-btn.active {
+    background: var(--forest);
+    color: var(--ivory);
+    border-color: var(--forest);
+    box-shadow: 0 8px 20px rgba(28, 74, 42, 0.15);
+  }
+
+  .pairing-right {
+    background: var(--ivory);
+    border: 0.5px solid var(--border);
+    padding: 60px 48px;
+    position: relative;
+    box-shadow: 0 20px 45px rgba(28, 74, 42, 0.03);
+    border-radius: 4px;
+  }
+
+  .pairing-right::before {
+    content: '';
+    position: absolute;
+    top: 16px; left: 16px;
+    right: -16px; bottom: -16px;
+    border: 0.5px solid var(--gold);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .recipe-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: var(--forest);
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+
+  .recipe-card-box {
+    opacity: 1;
+    transition: opacity 0.35s ease-in-out;
+  }
+
+  .recipe-card-box.fade-out {
+    opacity: 0;
+  }
+
+  .recipe-catalyst {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .catalyst-label {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  .catalyst-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--forest);
+    font-style: italic;
+  }
+
+  .recipe-instructions {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  .recipe-tip {
+    margin-top: 24px;
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--forest-mid);
+    display: flex;
+    gap: 8px;
+  }
+
+  .recipe-tip::before {
+    content: '✦';
+    color: var(--gold);
+    margin-right: 4px;
+  }
+
   /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 0 24px; }
@@ -976,6 +1250,18 @@
     footer { flex-direction: column; gap: 24px; text-align: center; padding: 48px 24px; }
     .benefits-top { flex-direction: column; align-items: flex-start; gap: 24px; }
     .wa-concierge { bottom: 24px; right: 24px; padding: 12px 20px; font-size: 12px; }
+
+    /* NEW RESPONSIVE STYLES */
+    .ritual-section { padding: 80px 24px; }
+    .ritual-grid { grid-template-columns: 1fr; gap: 40px; }
+    .ritual-grid::before { display: none; }
+    .ingredients-section { padding: 80px 24px; }
+    .ingredients-grid { grid-template-columns: 1fr; gap: 24px; }
+    .ingredients-top { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .pairing-section { padding: 80px 24px; }
+    .pairing-container { grid-template-columns: 1fr; gap: 48px; }
+    .pairing-options { grid-template-columns: 1fr; }
+    .pairing-right { padding: 40px 24px; }
   }
 </style>
 </head>
@@ -1063,6 +1349,85 @@
     <h2 class="section-heading">Nature's goodness<br>for your <em>natural beauty</em></h2>
     <p class="section-text">For centuries, Indian women have trusted the wisdom of herbs to care for their skin. MX Herbal Beauty Powder honors that tradition — handcrafted with care, free from harmful chemicals, and designed for every woman, every age, every skin type.</p>
     <p class="section-text" style="margin-bottom:0;">Because every woman carries the grace of Mahalakshmi within her. Our powder simply reveals it.</p>
+  </div>
+</section>
+
+<!-- THE BEAUTY RITUAL -->
+<section class="ritual-section" id="ritual">
+  <div class="ritual-top reveal">
+    <div class="detail-label" style="margin-bottom: 16px;">The Healing Ritual</div>
+    <h2 class="section-heading" style="text-align: center; margin-bottom: 0;">How to use <em>MX Powder</em></h2>
+  </div>
+  <div class="ritual-grid">
+    <div class="ritual-step reveal">
+      <div class="ritual-number">01</div>
+      <h3 class="ritual-title">Blend</h3>
+      <p class="ritual-desc">Measure one spoonful of MX Powder into a small bowl. Pair it with your chosen liquid catalyst (rose water, yogurt, or honey) according to your skin profile.</p>
+    </div>
+    <div class="ritual-step reveal reveal-delay-1">
+      <div class="ritual-number">02</div>
+      <h3 class="ritual-title">Apply &amp; Rest</h3>
+      <p class="ritual-desc">Smooth the paste evenly over your face and neck. Let the raw botanical active compounds absorb deeply into the skin barrier for fifteen minutes.</p>
+    </div>
+    <div class="ritual-step reveal reveal-delay-2">
+      <div class="ritual-number">03</div>
+      <h3 class="ritual-title">Reveal</h3>
+      <p class="ritual-desc">Moisten the dry mask slightly, massage in gentle circular motions to polish away dead skin, then rinse thoroughly with cool water to reveal your glow.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OUR BOTANICAL ALLIES -->
+<section class="ingredients-section" id="ingredients">
+  <div class="ingredients-top reveal">
+    <div>
+      <div class="detail-label" style="margin-bottom: 16px;">02 — Botanical Composition</div>
+      <h2 class="section-heading" style="margin-bottom: 0;">Our raw <em>botanical allies</em></h2>
+    </div>
+    <p class="benefits-note" style="color: var(--muted); text-align: right;">Grown by Nature, Harvested with Care</p>
+  </div>
+  <div class="ingredients-grid">
+    <div class="ingredient-card reveal">
+      <svg class="ingredient-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+      <h3 class="ingredient-name">Sandalwood</h3>
+      <span class="ingredient-sans">Chandan</span>
+      <p class="ingredient-desc">Soothes inflammation, lightens pigmentation marks, and leaves a grounding, woody fragrance.</p>
+    </div>
+    <div class="ingredient-card reveal reveal-delay-1">
+      <svg class="ingredient-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      <h3 class="ingredient-name">Neem Leaf</h3>
+      <span class="ingredient-sans">Margosa</span>
+      <p class="ingredient-desc">A natural antibacterial agent that clears blemishes, fights acne-causing microbes, and detoxifies pores.</p>
+    </div>
+    <div class="ingredient-card reveal reveal-delay-2">
+      <svg class="ingredient-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-13-7-13S5 10.7 5 15a7 7 0 0 0 7 7z"/>
+      </svg>
+      <h3 class="ingredient-name">Rose Petals</h3>
+      <span class="ingredient-sans">Taruni</span>
+      <p class="ingredient-desc">Tones skin layers, locks in natural hydration, and maintains pH levels for refined suppleness.</p>
+    </div>
+    <div class="ingredient-card reveal reveal-delay-3">
+      <svg class="ingredient-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
+      </svg>
+      <h3 class="ingredient-name">Wild Turmeric</h3>
+      <span class="ingredient-sans">Kasturi Manjal</span>
+      <p class="ingredient-desc">Brightens the complexion, fades stubborn tan lines, and fights free radicals without staining yellow.</p>
+    </div>
+    <div class="ingredient-card reveal reveal-delay-4">
+      <svg class="ingredient-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2z"/>
+        <path d="M12 22V12M12 12c2.5 0 5-2.5 5-5M12 12c-2.5 0-5-2.5-5-5"/>
+      </svg>
+      <h3 class="ingredient-name">Vetiver</h3>
+      <span class="ingredient-sans">Khus</span>
+      <p class="ingredient-desc">Cools the skin tissues, regulates excess oil glands, and promotes cell regeneration.</p>
+    </div>
   </div>
 </section>
 
@@ -1194,6 +1559,36 @@
   </div>
 </section>
 
+<!-- SKIN PAIRING GUIDE -->
+<section class="pairing-section" id="pairing-guide">
+  <div class="pairing-container">
+    <div class="pairing-left reveal">
+      <div class="detail-label" style="margin-bottom: 16px;">03 — Skin Pairing Guide</div>
+      <h2 class="detail-heading" style="margin-bottom: 24px;">Discover your custom <em>MX mixing recipe</em></h2>
+      <p class="section-text" style="font-size: 16px; margin-bottom: 0;">Select your current skin profile to reveal the optimal liquid catalyst to mix with your beauty powder. These combinations are designed to unlock maximum botanical efficacy.</p>
+      
+      <div class="pairing-options">
+        <button class="pairing-btn active" onclick="selectSkinProfile('oily', this)">Oily / Acne-Prone</button>
+        <button class="pairing-btn" onclick="selectSkinProfile('dry', this)">Dry / Dehydrated</button>
+        <button class="pairing-btn" onclick="selectSkinProfile('sensitive', this)">Sensitive / Redness</button>
+        <button class="pairing-btn" onclick="selectSkinProfile('combination', this)">Combination</button>
+      </div>
+    </div>
+    
+    <div class="pairing-right reveal reveal-delay-1">
+      <div class="recipe-card-box" id="recipe-card">
+        <h3 class="recipe-title" id="recipe-title">Oily / Acne-Prone Profile</h3>
+        <div class="recipe-catalyst">
+          <span class="catalyst-label">Ideal Catalyst:</span>
+          <span class="catalyst-value" id="recipe-catalyst">Organic Rose Water</span>
+        </div>
+        <p class="recipe-instructions" id="recipe-instructions">Mix 1 scoop of MX Powder with enough rose water to form a smooth paste. Rose water acts as a natural astringent, helping tighten pores, balance sebum production, and clarify blemishes without drying the skin barrier.</p>
+        <div class="recipe-tip" id="recipe-tip">Application frequency: 3-4 times a week, focused on the T-zone.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="contact-section" id="contact">
   <div class="contact-left reveal">
@@ -1246,6 +1641,54 @@
 </footer>
 
 <script>
+  // Recipes data object for the skin selector widget
+  const skinRecipes = {
+    oily: {
+      title: "Oily / Acne-Prone Profile",
+      catalyst: "Organic Rose Water",
+      instructions: "Mix 1 scoop of MX Powder with enough rose water to form a smooth paste. Rose water acts as a natural astringent, helping tighten pores, balance sebum production, and clarify blemishes without drying the skin barrier.",
+      tip: "Application frequency: 3-4 times a week, focused on the T-zone."
+    },
+    dry: {
+      title: "Dry / Dehydrated Profile",
+      catalyst: "Raw Milk or Fresh Yogurt",
+      instructions: "Blend 1 scoop of MX Powder with raw milk or plain yogurt. The lactic acid in dairy acts as a gentle exfoliant, while lipids nourish dry, flaky skin, locking in moisture and revealing a supple, dewy finish.",
+      tip: "Application frequency: 2-3 times a week, follow immediately with a rich face oil."
+    },
+    sensitive: {
+      title: "Sensitive / Redness Profile",
+      catalyst: "Aloe Vera Gel or Cucumber Juice",
+      instructions: "Combine 1 scoop of MX Powder with fresh aloe vera gel or cold-pressed cucumber juice. This mixture forms a soothing botanical shield that cools heated tissues, relieves irritation, and reduces superficial redness.",
+      tip: "Application frequency: 1-2 times a week. Rinse with lukewarm water (never hot)."
+    },
+    combination: {
+      title: "Combination Skin Profile",
+      catalyst: "Honey &amp; Water Blend",
+      instructions: "Dissolve 1 scoop of MX Powder with a mixture of raw honey and a few drops of water. Honey targets oily regions with its antibacterial action while simultaneously hydrating dry patches like the cheeks.",
+      tip: "Application frequency: 3 times a week. Target zones selectively as needed."
+    }
+  };
+
+  function selectSkinProfile(profile, element) {
+    if (element.classList.contains('active')) return;
+    
+    document.querySelectorAll('.pairing-btn').forEach(btn => btn.classList.remove('active'));
+    element.classList.add('active');
+    
+    const card = document.getElementById('recipe-card');
+    card.classList.add('fade-out');
+    
+    setTimeout(() => {
+      const recipe = skinRecipes[profile];
+      document.getElementById('recipe-title').innerText = recipe.title;
+      document.getElementById('recipe-catalyst').innerText = recipe.catalyst;
+      document.getElementById('recipe-instructions').innerHTML = recipe.instructions;
+      document.getElementById('recipe-tip').innerText = recipe.tip;
+      
+      card.classList.remove('fade-out');
+    }, 350);
+  }
+
   // Dynamic WhatsApp message compiler
   function sendWhatsAppMessage(event) {
     event.preventDefault();
